@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 export const SomeComponent: React.FC = () => {
   const [componentCounter, setComponentCounter] = useState(1)
@@ -24,7 +24,7 @@ export const SomeComponent: React.FC = () => {
 }
 
 export const useSomeHook = (counter: number) => {
-  const result = useMemo(() => makeSomeCalculations(counter), [counter])
+  const result = makeSomeCalculations(counter)
   console.log('hookCalculations', result)
   return result
 }
